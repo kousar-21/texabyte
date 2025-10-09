@@ -34,7 +34,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-[#00000010] border-none hover:bg-gray-300">Set Meeting</a>
+                <a href='https://www.whatsapp.com/?lang=en' target="_blank" className="btn bg-[#00000010] border-none hover:bg-gray-300">Set Meeting</a>
             </div>
         </div>
     );
