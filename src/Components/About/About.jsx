@@ -26,7 +26,7 @@ const About = () => {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#000000]">
                     Who We Are
                 </h1>
-                <p className="text-sm sm:text-base text-[#484848] mt-6 leading-relaxed">
+                <p className="text-base text-[#484848] mt-6 leading-relaxed">
                     At Techsabyte, we believe technology should empower ideas to thrive.
                     We craft scalable software, intuitive designs, and smart solutions
                     that help businesses grow in today’s fast-changing digital world. From
@@ -34,7 +34,7 @@ const About = () => {
                     technology consulting, our focus is on delivering value that makes
                     your vision stand out.
                 </p>
-                <p className="text-sm sm:text-base text-[#484848] mt-3 leading-relaxed">
+                <p className="text-base text-[#484848] mt-3 leading-relaxed">
                     From concept to deployment, we work closely with you to create
                     experiences that are not only functional but also meaningful and
                     impactful. At Techsabyte, every project is more than just code or
