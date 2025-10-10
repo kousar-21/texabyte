@@ -2,10 +2,13 @@
 
 @import "tailwindcss";
 @plugin "daisyui";
-@plugin "daisyui/theme"{
-    
+
+@plugin "daisyui/theme" {
+    --color-primary: "#8584EF";
+    --color-secondary: "#484848";
+    --color-accent: "#000000"
 }
 
-*{
+* {
     font-family: "Inter", sans-serif;
 }

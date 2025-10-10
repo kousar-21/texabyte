@@ -10,7 +10,7 @@ const Service = () => {
             </div>
             <div className='mt-9'>
                 <div>
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#000000]">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary">
                         Who We Are
                     </h1>
                     <p className="text-base text-[#484848] mt-6 leading-relaxed">
