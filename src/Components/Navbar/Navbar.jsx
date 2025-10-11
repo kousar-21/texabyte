@@ -64,7 +64,7 @@ const Navbar = () => {
         <a 
         href="https://www.whatsapp.com/?lang=en"
         target="_blank"
-        className='bg-[#00000010] rounded-[4px] border-none hover:bg-gray-300 py-[10px] px-[14px] sm:px-5'
+        className='bg-[#00000010] rounded-[4px] border-none hover:bg-[#00000030]  py-[10px] px-[14px] sm:px-5'
         >
             Set Meeting
         </a>
