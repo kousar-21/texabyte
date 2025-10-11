@@ -16,14 +16,17 @@ const Hero = () => {
 
       {/* start a conversation */}
       <div className="flex justify-center items-center mt-8 sm:mt-10 lg:mt-12">
-        <button className=" bg-purple hover:bg-[#00000020] rounded-[5px] flex items-center text-white hover:text-purple text-sm sm:text-base py-2 sm:py-[12.5px] px-4 sm:px-[20px] group">
+        <button
+          className="bg-black hover:bg-[#00000020] rounded-[5px] flex items-center text-white hover:text-black text-sm sm:text-base py-2 sm:py-[12.5px] px-4 sm:px-[20px] group"
+        >
+          {/* White Icon by default, Black on hover */}
           <img
-            className="w-6 h-6 sm:w-7 sm:h-7 mr-2 group-hover:hidden"
+            className="size-5 sm:size-6 mr-2 group-hover:hidden"
             src={white}
             alt="message-icon"
           />
           <img
-            className="w-6 h-6 sm:w-7 sm:h-7 mr-2 hidden group-hover:block"
+            className="size-5 sm:size-6 mr-2 hidden group-hover:block"
             src={black}
             alt="message-icon"
           />

@@ -74,10 +74,10 @@ const Service = () => {
                                     src={service.img}
                                     alt={service.title}
                                 />
-                                <h1 className="text-purple text-xl sm:text-2xl mb-[18px]">
+                                <h1 className="text-accent text-xl sm:text-2xl mb-[18px]">
                                     {service.title}
                                 </h1>
-                                <p className="text-midnight text-base leading-relaxed">
+                                <p className="text-secondary text-base leading-relaxed">
                                     {service.desc}
                                 </p>
                             </div>

@@ -45,7 +45,7 @@ const BootCamps = () => {
             <div className="pt-11">
                 <div className="flex flex-col lg:flex-row border border-[#00000020] rounded-[8px] overflow-hidden">
                     {/* Image */}
-                    <div className="w-1/3 p-6">
+                    <div className="lg:w-1/3 p-6">
                         <div className="rounded-[6px] overflow-hidden">
                             <img
                                 className="block w-full h-64 sm:h-80 md:h-[435px] object-cover"
@@ -76,7 +76,7 @@ const BootCamps = () => {
                         </button>
 
                         {/* Cards */}
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-5 mt-10 sm:mt-12 justify-items-center">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-5 mt-10 sm:mt-12 justify-items-center">
                             {cards.map((card, index) => (
                                 <div
                                     key={index}

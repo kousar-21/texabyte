@@ -126,24 +126,24 @@ const Projects = () => {
                             {/* ⬅️ Left Button */}
                             <button
                                 onClick={handlePrev}
-                                className="flex items-center justify-center w-12 h-12 rounded-full border border-[#00000030] bg-white shadow-md hover:bg-purple hover:border-purple hover:shadow-lg transition-all duration-300 group"
+                                className="flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md hover:bg-secondary hover:border-accent hover:shadow-lg transition-all duration-300 group"
                             >
                                 <img
                                     src={left}
                                     alt="left_arrow"
-                                    className="w-6 h-6 group-hover:invert"
+                                    className="w-7 h-7 group-hover:invert"
                                 />
                             </button>
 
                             {/* ➡️ Right Button */}
                             <button
                                 onClick={handleNext}
-                                className="flex items-center justify-center w-12 h-12 rounded-full border border-[#00000030] bg-white shadow-md hover:bg-purple hover:border-purple hover:shadow-lg transition-all duration-300 group"
+                                className="flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md hover:bg-secondary hover:border-accent hover:shadow-lg transition-all duration-300 group"
                             >
                                 <img
                                     src={right}
                                     alt="right_arrow"
-                                    className="w-6 h-6 group-hover:invert"
+                                    className="w-7 h-7 group-hover:invert"
                                 />
                             </button>
                         </div>
