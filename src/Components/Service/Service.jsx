@@ -53,7 +53,7 @@ const Service = () => {
             <div className="mt-10 flex flex-col lg:flex-row gap-10 lg:gap-16">
                 {/* Left Text Section */}
                 <div className="lg:w-1/3 w-full">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl text-purple">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
                         Our Services
                     </h1>
                     <p className="text-base text-[#484848] mt-6 leading-relaxed">

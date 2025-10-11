@@ -67,7 +67,7 @@ const Projects = () => {
 
             {/* Section content */}
             <div className="w-full mt-9">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-purple">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
                     Our Project
                 </h1>
                 <p className="text-base text-[#484848] mt-6 leading-relaxed">
@@ -83,7 +83,7 @@ const Projects = () => {
             <div className="pt-8">
                 <div className="flex flex-col md:flex-row border border-[#00000020] rounded-[8px] overflow-hidden">
                     {/* Image Section */}
-                    <div className="w-full md:w-1/3 p-6 flex justify-center items-center">
+                    <div className="w-full md:w-1/2 lg:w-1/3 p-6 flex justify-center items-center">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentProject.id}
@@ -102,7 +102,7 @@ const Projects = () => {
                         </AnimatePresence>
                     </div>
 
-                    <div className="w-full md:w-2/3 flex justify-center items-center pr-4 md:pr-9 px-4 md:px-0 pb-6 md:pb-0 relative">
+                    <div className="w-full md:w-1/2 lg:w-2/3 flex justify-center items-center pr-4 md:pr-9 px-4 md:px-0 pb-6 md:pb-0 relative">
                         {/* Animated Text */}
                         <AnimatePresence mode="wait">
                             <motion.div
@@ -112,7 +112,7 @@ const Projects = () => {
                                 exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-purple">
+                                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
                                     {currentProject.title}
                                 </h1>
                                 <p className="mt-6 text-base text-[#484848] leading-relaxed">

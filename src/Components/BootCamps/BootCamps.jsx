@@ -29,7 +29,7 @@ const BootCamps = () => {
 
             {/* Intro Text */}
             <div className="mt-9 w-full">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-purple">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
                     Our Bootcamps
                 </h1>
                 <p className="text-base text-[#484848] mt-6 leading-relaxed">
@@ -57,7 +57,7 @@ const BootCamps = () => {
 
                     {/* Content */}
                     <div className="lg:w-2/3 w-full p-6 sm:p-8 lg:p-10">
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-purple">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
                             Acquire Knowledge, Build Skills, Achieve Excellence
                         </h1>
                         <p className="mt-6 sm:mt-8 text-base text-[#484848] leading-relaxed">
