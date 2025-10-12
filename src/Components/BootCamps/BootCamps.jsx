@@ -29,7 +29,7 @@ const BootCamps = () => {
 
             {/* Intro Text */}
             <div className="mt-9 w-full">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary">
                     Our Bootcamps
                 </h1>
                 <p className="text-base text-[#484848] mt-6 leading-relaxed">
@@ -57,7 +57,7 @@ const BootCamps = () => {
 
                     {/* Content */}
                     <div className="lg:w-2/3 w-full p-6 sm:p-8 lg:p-10">
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary">
                             Acquire Knowledge, Build Skills, Achieve Excellence
                         </h1>
                         <p className="mt-6 sm:mt-8 text-base text-[#484848] leading-relaxed">
@@ -70,10 +70,11 @@ const BootCamps = () => {
                         </p>
 
                         {/* Button */}
-                        <button className="mt-8 sm:mt-10 btn flex items-center gap-2 mx-auto lg:mx-0">
+                        <button className="mt-8 sm:mt-10 btn flex items-center gap-2 mx-auto lg:mx-0 shadow-none font-normal rounded-[4px] border border-transparent hover:border-black bg-[#8584EF20] dark:text-black py-[24px] px-[24px] sm:px-5 transition-all duration-300">
                             Learn More
                             <img className="w-8 h-8" src={rightArrow} alt="right-arrow" />
                         </button>
+
 
                         {/* Cards */}
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-5 mt-10 sm:mt-12 justify-items-center">

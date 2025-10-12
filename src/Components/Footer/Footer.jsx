@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/footer/footer_icon.png';
+import logo from '../../assets/footer/footer_logo.png';
 import fb from '../../assets/footer/facebook.png';
 import insta from '../../assets/footer/instragram.png';
 import linkedin from '../../assets/footer/linkedin.png';
@@ -17,7 +17,7 @@ const Footer = () => {
           <img className="w-24 sm:w-28 md:w-32 h-auto" src={logo} alt="techsabyte-icon" />
 
           {/* Navigation Links */}
-          <div className="lg:text-base text-accent grid grid-cols-2 lg:grid-cols-4 mt-8 gap-4">
+          <div className="lg:text-base text-primary grid grid-cols-2 lg:grid-cols-4 mt-8 gap-4">
             <p>About</p>
             <p>Services</p>
             <p>Projects</p>
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 text-accent mt-8 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 text-primary mt-8 gap-6">
             <div>
               <p className="text-sm text-gray-400">Email</p>
               <p className="text-base mt-2">info@techsabyte.com</p>
@@ -47,7 +47,7 @@ const Footer = () => {
 
         {/* 3rd Column */}
         <div className="flex flex-col items-center text-center mt-10 md:mt-0">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary">
             Ready to start your <br /> project with us?
           </h1>
           <div className="mt-8">
@@ -55,9 +55,9 @@ const Footer = () => {
               href="https://www.whatsapp.com/?lang=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#00000010] rounded-md hover:bg-[#00000030] py-3 px-5 sm:px-6"
+              className=" rounded-[4px] hover:border hover:border-black  bg-[#8584EF20] dark:text-black py-[12px] px-[14px] sm:px-5"
             >
-              Set Meeting
+              Hire The Best Team
             </a>
           </div>
         </div>

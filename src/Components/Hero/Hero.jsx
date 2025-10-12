@@ -17,7 +17,7 @@ const Hero = () => {
       {/* start a conversation */}
       <div className="flex justify-center items-center mt-8 sm:mt-10 lg:mt-12">
         <button
-          className="bg-black hover:bg-[#00000020] rounded-[5px] flex items-center text-white hover:text-black text-sm sm:text-base py-2 sm:py-[12.5px] px-4 sm:px-[20px] group"
+          className="bg-primary hover:bg-[#8584EF20] hover:border  rounded-[5px] flex items-center text-white hover:text-black text-sm sm:text-base py-2 sm:py-[12.5px] px-4 sm:px-[20px] group"
         >
           {/* White Icon by default, Black on hover */}
           <img

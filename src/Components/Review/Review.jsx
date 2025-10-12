@@ -64,7 +64,7 @@ const Review = () => {
     <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-[50px] overflow-hidden">
       {/* Section Header */}
       <div className="text-center mt-20 md:mt-32 lg:mt-40">
-        <span className="inline-block px-4 py-2 border border-[#00000020] rounded-[5px] text-base text-accent">
+        <span className="inline-block px-4 py-2 border border-[#00000020] rounded-[5px] text-base text-black">
           Reviews
         </span>
       </div>
@@ -86,7 +86,7 @@ const Review = () => {
               className="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl border border-gray-200 p-6 relative shadow-sm flex flex-col justify-between h-[420px]"
             >
               {/* Quotation icon */}
-              <div className="absolute -top-5 left-6 bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center z-10">
+              <div className="absolute -top-5 left-6 border border-accent bg-[#8584EF20] w-10 h-10 rounded-full flex items-center justify-center z-10">
                 <img
                   src={quotation}
                   alt="quotation mark"

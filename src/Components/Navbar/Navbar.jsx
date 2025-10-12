@@ -1,5 +1,5 @@
 import React from 'react';
-import navIcon from "../../assets/nab/nav_icon.png";
+import navIcon from "../../assets/nab/logo.png";
 
 const Navbar = () => {
   const links = (
@@ -12,7 +12,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 pt-[20px] sm:pt-[30px] lg:pt-[50px] px-4 sm:px-[30px] lg:px-[50px]">
+    <div className="navbar bg-base-100 dark:bg-white pt-[20px] sm:pt-[30px] lg:pt-[50px] px-4 sm:px-[30px] lg:px-[50px]">
       {/* Navbar Start */}
       <div className="navbar-start">
         {/* Mobile Dropdown */}
@@ -50,7 +50,7 @@ const Navbar = () => {
       {/* Navbar Center (Hidden on small) */}
       <div className="navbar-center hidden md:flex">
         <img
-          className="text-[#000000] size-4 mr-[8.5px]"
+          className="text-[#8584EF] size-8 mr-[8.5px]"
           src={navIcon}
           alt="TechsaByte-Icon"
         />
@@ -60,11 +60,11 @@ const Navbar = () => {
       </div>
 
       {/* Navbar End */}
-      <div className="navbar-end">
+      <div className="navbar-end ">
         <a 
         href="https://www.whatsapp.com/?lang=en"
         target="_blank"
-        className='bg-[#00000010] rounded-[4px] border-none hover:bg-[#00000030]  py-[10px] px-[14px] sm:px-5'
+        className='rounded-[4px] hover:border hover:border-black bg-[#8584EF20] dark:text-black py-[10px] px-[14px] sm:px-5'
         >
             Set Meeting
         </a>

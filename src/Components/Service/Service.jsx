@@ -53,7 +53,7 @@ const Service = () => {
             <div className="mt-10 flex flex-col lg:flex-row gap-10 lg:gap-16">
                 {/* Left Text Section */}
                 <div className="lg:w-1/3 w-full">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary">
                         Our Services
                     </h1>
                     <p className="text-base text-[#484848] mt-6 leading-relaxed">
@@ -67,14 +67,14 @@ const Service = () => {
                         {services.map((service, index) => (
                             <div
                                 key={index}
-                                className="py-8 px-6 border border-[#00000020] rounded-[8px] hover:shadow-md transition-all duration-300"
+                                className="py-8 px-6 border border-[#00000020] rounded-[8px] hover:shadow-md hover:shadow-primary transition-all duration-300"
                             >
                                 <img
-                                    className="mb-[18px] w-10 h-10 mx-auto sm:mx-0"
+                                    className="mb-[18px] size-20 mx-auto sm:mx-0"
                                     src={service.img}
                                     alt={service.title}
                                 />
-                                <h1 className="text-accent text-xl sm:text-2xl mb-[18px]">
+                                <h1 className="text-primary text-xl sm:text-2xl mb-[18px]">
                                     {service.title}
                                 </h1>
                                 <p className="text-secondary text-base leading-relaxed">

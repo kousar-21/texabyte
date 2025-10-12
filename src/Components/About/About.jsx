@@ -23,7 +23,7 @@ const About = () => {
 
             {/* Heading and Paragraph */}
             <div className="text-center lg:text-left mt-9">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#000000]">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary">
                     Who We Are
                 </h1>
                 <p className="text-base text-[#484848] mt-6 leading-relaxed">
@@ -51,8 +51,8 @@ const About = () => {
                         className="flex flex-col items-center justify-center text-center border border-[#00000020] rounded-[8px] py-7 px-10 sm:px-16 md:px-20 h-full 
                        transition-transform duration-300 transform hover:scale-110 cursor-pointer"
                     >
-                        <img className="w-12 h-12" src={card.img} alt={card.text} />
-                        <p className="text-[#484848] text-lg sm:text-xl mt-5 whitespace-nowrap">
+                        <img className="size-20" src={card.img} alt={card.text} />
+                        <p className="text-[#484848] text-2xl sm:text-xl mt-5 whitespace-nowrap">
                             {card.text}
                         </p>
                     </div>

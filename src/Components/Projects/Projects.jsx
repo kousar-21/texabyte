@@ -67,7 +67,7 @@ const Projects = () => {
 
             {/* Section content */}
             <div className="w-full mt-9">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary">
                     Our Project
                 </h1>
                 <p className="text-base text-[#484848] mt-6 leading-relaxed">
@@ -112,7 +112,7 @@ const Projects = () => {
                                 exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-accent">
+                                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary">
                                     {currentProject.title}
                                 </h1>
                                 <p className="mt-6 text-base text-[#484848] leading-relaxed">
@@ -126,24 +126,24 @@ const Projects = () => {
                             {/* ⬅️ Left Button */}
                             <button
                                 onClick={handlePrev}
-                                className="flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md hover:bg-secondary hover:border-accent hover:shadow-lg transition-all duration-300 group"
+                                className="group flex items-center justify-center w-12 h-12 rounded-full bg-white border transition-all duration-300 hover:bg-[#8584EF20] hover:border-accent hover:shadow-lg"
                             >
                                 <img
                                     src={left}
                                     alt="left_arrow"
-                                    className="w-7 h-7 group-hover:invert"
+                                    className="w-7 h-7"
                                 />
                             </button>
 
                             {/* ➡️ Right Button */}
                             <button
                                 onClick={handleNext}
-                                className="flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md hover:bg-secondary hover:border-accent hover:shadow-lg transition-all duration-300 group"
+                                className="group flex items-center justify-center w-12 h-12 rounded-full bg-white border transition-all duration-300 hover:bg-[#8584EF20] hover:border-accent hover:shadow-lg"
                             >
                                 <img
                                     src={right}
                                     alt="right_arrow"
-                                    className="w-7 h-7 group-hover:invert"
+                                    className="w-7 h-7"
                                 />
                             </button>
                         </div>
