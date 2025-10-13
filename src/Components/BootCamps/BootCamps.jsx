@@ -7,6 +7,7 @@ import c from "../../assets/bootcamp/c.png";
 import python from "../../assets/bootcamp/python.png";
 import security from "../../assets/bootcamp/security.png";
 import robotics from "../../assets/bootcamp/robotic.png";
+import { Link } from 'react-router';
 
 const BootCamps = () => {
     const cards = [
@@ -70,10 +71,12 @@ const BootCamps = () => {
                         </p>
 
                         {/* Button */}
-                        <button className="mt-8 sm:mt-10 btn flex items-center gap-2 mx-auto lg:mx-0 shadow-none font-normal rounded-[4px] border border-transparent hover:border-black bg-[#8584EF20] dark:text-black py-[24px] px-[24px] sm:px-5 transition-all duration-300">
+                       <Link to="/learn">
+                        <button  className="mt-8 sm:mt-10 btn flex items-center gap-2 mx-auto lg:mx-0 shadow-none font-normal rounded-[4px] border border-transparent hover:border-black bg-[#8584EF20] dark:text-black py-[24px] px-[24px] sm:px-5 transition-all duration-300">
                             Learn More
                             <img className="w-8 h-8" src={rightArrow} alt="right-arrow" />
                         </button>
+                       </Link>
 
 
                         {/* Cards */}

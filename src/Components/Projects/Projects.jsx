@@ -78,9 +78,9 @@ const Projects = () => {
 
 
     return (
-        <div className="px-4 sm:px-6 md:px-10 lg:px-[50px]">
+        <div id="projects" className="px-4 sm:px-6 md:px-10 lg:px-[50px]">
             {/* Section Header */}
-            <div className="text-center mt-20 md:mt-32 lg:mt-40">
+            <div className="text-center pt-20 md:pt-32 lg:pt-40">
                 <span className="inline-block px-4 py-2 border border-[#00000020] rounded-[5px] text-base text-[#000000]">
                     Projects
                 </span>

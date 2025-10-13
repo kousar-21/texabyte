@@ -1,15 +1,86 @@
 import React from 'react';
 import navIcon from "../../assets/nab/logo.png";
+import { useLocation, useNavigate } from 'react-router';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
+  const location = useLocation(); 
+  const navigate = useNavigate(); 
+
+
+  //  New function to handle scrolling between pages
+  const handleScroll = (section) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: section } }); // navigate home first
+    }
+  };
+
+  //  Updated links with react-scroll
   const links = (
     <>
-      <li><a>About</a></li>
-      <li><a>Services</a></li>
-      <li><a>Projects</a></li>
-      <li><a>Contact</a></li>
+      <li>
+        <ScrollLink
+          to="about"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          spy={true}
+          className="cursor-pointer"
+          onClick={() => handleScroll("about")} // 🔥 Added
+        >
+          About
+        </ScrollLink>
+      </li>
+      <li>
+        <ScrollLink
+          to="services"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          spy={true}
+          className="cursor-pointer"
+          onClick={() => handleScroll("services")} // 🔥 Added
+        >
+          Services
+        </ScrollLink>
+      </li>
+      <li>
+        <ScrollLink
+          to="projects"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          spy={true}
+          className="cursor-pointer"
+          onClick={() => handleScroll("projects")} // 🔥 Added
+        >
+          Projects
+        </ScrollLink>
+      </li>
+      <li>
+        <ScrollLink
+          to="contact"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          spy={true}
+          className="cursor-pointer"
+          onClick={() => handleScroll("contact")} // 🔥 Added
+        >
+          Contact
+        </ScrollLink>
+      </li>
     </>
   );
+
+  // existing logo click handler
+  const handleHomeClick = () => {
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
+  };
 
   return (
     <div className="navbar bg-base-100 dark:bg-white pt-[20px] sm:pt-[30px] lg:pt-[50px] px-4 sm:px-[30px] lg:px-[50px]">
@@ -41,15 +112,20 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Brand Name */}
-        <h3 className="text-[#000000] text-base">
-          TechsaByte
-        </h3>
+        {/* Brand Name  — clickable  */}
+        <div onClick={handleHomeClick}>
+          <h3 className="text-[#000000] text-base">
+            TechsaByte
+          </h3>
+        </div>
+
+
       </div>
 
       {/* Navbar Center (Hidden on small) */}
       <div className="navbar-center hidden md:flex">
         <img
+          onClick={handleHomeClick}
           className="text-[#8584EF] size-8 mr-[8.5px]"
           src={navIcon}
           alt="TechsaByte-Icon"
@@ -61,11 +137,11 @@ const Navbar = () => {
 
       {/* Navbar End */}
       <div className="navbar-end ">
-        <a 
-         href="https://wa.me/8801741056604" target='_blank'
-        className='rounded-[4px] hover:border hover:border-black bg-[#8584EF20] dark:text-black py-[10px] px-[14px] sm:px-5'
+        <a
+          href="https://wa.me/8801741056604" target='_blank'
+          className='rounded-[4px] hover:border hover:border-black bg-[#8584EF20] dark:text-black py-[10px] px-[14px] sm:px-5'
         >
-            Set Meeting
+          Set Meeting
         </a>
       </div>
     </div>

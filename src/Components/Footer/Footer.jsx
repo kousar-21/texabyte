@@ -7,7 +7,7 @@ import whatsapp from '../../assets/footer/whatsapp.png';
 
 const Footer = () => {
   return (
-    <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-[50px]">
+    <div  id="contact" className="mx-4 sm:mx-6 md:mx-10 lg:mx-[50px]">
       {/* Divider */}
       <div className="border-b-2 border-gray-300 mt-20 mb-14"></div>
 
