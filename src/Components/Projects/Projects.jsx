@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import projectImg from "../../assets/project/projects.jpg";
-import projectImg2 from "../../assets/project/projects(2).jpg";
-import projectImg3 from "../../assets/project/projects(3).jpg";
-import projectImg4 from "../../assets/project/projects(4).jpg";
+import projectImg from "../../assets/project/1.jpg";
+import projectImg2 from "../../assets/project/2.jpg";
+import projectImg3 from "../../assets/project/3.jpg";
 import left from "../../assets/project/left_arrow.png";
 import right from "../../assets/project/right_arrow.png";
 
@@ -12,49 +11,71 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "infoTouch",
+            title: "Video Editing Portfolio Website",
             image: projectImg,
             description:
-                "In today’s fast-paced digital world, every idea deserves the chance to shine. We help you transform your vision into a powerful reality by combining creativity, innovation, and technology. Whether it’s building a modern website, designing engaging digital content, or developing smart solutions, our focus is on making your ideas stand out. From the very first concept to the final execution, we work hand in hand with you to craft experiences that are not only visually striking but also meaningful and effective.",
+                "In today’s fast-paced digital world, every idea deserves the chance to shine. This stylish and responsive portfolio website was designed to help video editors and creators showcase their work with elegance and clarity. By combining creativity, innovation, and technology, the design delivers a seamless user experience from highlighting services and projects to building client connections. The result is a visually captivating and functional platform that turns creative vision into a digital reality.",
         },
         {
             id: 2,
-            title: "TechWave",
+            title: "Modern Responsive Portfolio Website",
             image: projectImg2,
             description:
-                "We specialize in delivering end-to-end digital solutions that empower businesses to thrive. Our team focuses on blending innovation and functionality, ensuring every project is visually stunning and strategically effective.",
+                "EA Portal is a modern and responsive portfolio website designed to transform creative ideas into stunning digital experiences. Built with a sleek interface and intuitive structure, it highlights projects, services, and testimonials in a clean, professional way. The design focuses on usability, performance, and visual impact, offering a seamless experience across all devices. From concept to final execution, the goal was to craft a platform that reflects innovation, clarity, and creativity at every interaction.",
         },
         {
             id: 3,
-            title: "SmartEdge",
+            title: "Modern Blog Website",
             image: projectImg3,
             description:
-                "SmartEdge is all about simplifying complex ideas into powerful, user-friendly experiences. Our work integrates modern design principles with seamless technology to drive real-world impact.",
-        },
-        {
-            id: 4,
-            title: "NextCore",
-            image: projectImg4,
-            description:
-                "NextCore transforms your concepts into cutting-edge solutions. We focus on crafting projects that are scalable, innovative, and tailored to your business goals for the digital age.",
-        },
+                "This modern and responsive blog website is designed to provide a seamless reading experience while maintaining a clean and visually appealing layout. It blends creativity and functionality to help writers, creators, and brands share their stories effortlessly. With a focus on typography, readability, and smooth navigation, the design ensures every article stands out. From engaging visuals to dynamic post management, the website delivers an elegant platform for storytelling, inspiration, and digital presence.",
+        }
     ];
 
     // Track current card index
     const [current, setCurrent] = useState(0);
+    const [isUserInteracted, setIsUserInteracted] = useState(false);
 
     // Handle next and previous
     const handleNext = () => {
         setCurrent((prev) => (prev + 1) % projects.length);
+        setIsUserInteracted(true);
     };
 
     const handlePrev = () => {
         setCurrent((prev) =>
             prev === 0 ? projects.length - 1 : prev - 1
         );
+        setIsUserInteracted(true);
     };
 
     const currentProject = projects[current];
+
+
+    // 🔥 Modified autoplay logic (pauses when user interacts, resumes after 5s)
+    useEffect(() => {
+        let autoPlayTimer;
+        let resumeTimer;
+
+        if (isUserInteracted) {
+            // Wait 5s after interaction, then resume autoplay
+            resumeTimer = setTimeout(() => {
+                setIsUserInteracted(false);
+            }, 5000);
+        } else {
+            // Autoplay every 5s
+            autoPlayTimer = setInterval(() => {
+                setCurrent((prev) => (prev + 1) % projects.length);
+            }, 5000);
+        }
+
+        return () => {
+            clearInterval(autoPlayTimer);
+            clearTimeout(resumeTimer);
+        };
+    }, [isUserInteracted, projects.length]);
+    // 🔥 END autoplay logic
+
 
     return (
         <div className="px-4 sm:px-6 md:px-10 lg:px-[50px]">
@@ -122,9 +143,9 @@ const Projects = () => {
                         </AnimatePresence>
 
                         {/* 🔥 Button container moved OUTSIDE motion.div to stay fixed */}
-                        <div className="absolute bottom-4 right-6 flex items-center gap-6">
-                            {/* ⬅️ Left Button */}
-                            <button
+                        {/* <div className="absolute bottom-4 right-6 flex items-center gap-6"> */}
+                        {/* ⬅️ Left Button */}
+                        {/* <button
                                 onClick={handlePrev}
                                 className="group flex items-center justify-center w-12 h-12 rounded-full bg-white border transition-all duration-300 hover:bg-[#8584EF20] hover:border-accent hover:shadow-lg"
                             >
@@ -133,10 +154,10 @@ const Projects = () => {
                                     alt="left_arrow"
                                     className="w-7 h-7"
                                 />
-                            </button>
+                            </button> */}
 
-                            {/* ➡️ Right Button */}
-                            <button
+                        {/* ➡️ Right Button */}
+                        {/* <button
                                 onClick={handleNext}
                                 className="group flex items-center justify-center w-12 h-12 rounded-full bg-white border transition-all duration-300 hover:bg-[#8584EF20] hover:border-accent hover:shadow-lg"
                             >
@@ -145,6 +166,23 @@ const Projects = () => {
                                     alt="right_arrow"
                                     className="w-7 h-7"
                                 />
+                            </button>
+                        </div> */}
+
+                        {/* 🔥 Navigation Buttons */}
+                        <div className="absolute bottom-4 right-6 flex items-center gap-6">
+                            <button
+                                onClick={handlePrev}
+                                className="group flex items-center justify-center w-12 h-12 rounded-full bg-white border transition-all duration-300 hover:bg-[#8584EF20] hover:border-accent hover:shadow-lg"
+                            >
+                                <img src={left} alt="left_arrow" className="w-7 h-7" />
+                            </button>
+
+                            <button
+                                onClick={handleNext}
+                                className="group flex items-center justify-center w-12 h-12 rounded-full bg-white border transition-all duration-300 hover:bg-[#8584EF20] hover:border-accent hover:shadow-lg"
+                            >
+                                <img src={right} alt="right_arrow" className="w-7 h-7" />
                             </button>
                         </div>
                         {/* 🔥 END of button section */}

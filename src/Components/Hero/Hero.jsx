@@ -16,6 +16,7 @@ const Hero = () => {
 
       {/* start a conversation */}
       <div className="flex justify-center items-center mt-8 sm:mt-10 lg:mt-12">
+        <a  href="https://wa.me/8801741056604" target='_blank'>
         <button
           className="bg-primary hover:bg-[#8584EF20] hover:border  rounded-[5px] flex items-center text-white hover:text-black text-sm sm:text-base py-2 sm:py-[12.5px] px-4 sm:px-[20px] group"
         >
@@ -32,6 +33,7 @@ const Hero = () => {
           />
           Start a Conversation
         </button>
+        </a>
       </div>
 
 

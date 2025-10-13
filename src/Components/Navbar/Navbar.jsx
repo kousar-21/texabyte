@@ -62,8 +62,7 @@ const Navbar = () => {
       {/* Navbar End */}
       <div className="navbar-end ">
         <a 
-        href="https://www.whatsapp.com/?lang=en"
-        target="_blank"
+         href="https://wa.me/8801741056604" target='_blank'
         className='rounded-[4px] hover:border hover:border-black bg-[#8584EF20] dark:text-black py-[10px] px-[14px] sm:px-5'
         >
             Set Meeting

@@ -67,7 +67,7 @@ const Service = () => {
                         {services.map((service, index) => (
                             <div
                                 key={index}
-                                className="py-8 px-6 border border-[#00000020] rounded-[8px] hover:shadow-md hover:shadow-primary transition-all duration-300"
+                                className="py-8 px-6 border border-[#00000020] rounded-[8px] transition-all duration-300 transform hover:scale-105"
                             >
                                 <img
                                     className="mb-[18px] size-20 mx-auto sm:mx-0"

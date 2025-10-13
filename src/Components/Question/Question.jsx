@@ -18,9 +18,11 @@ const Question = () => {
 
       {/* Send Message Button */}
       <div className="text-start mt-14">
+        <a href="https://wa.me/8801741056604" target='_blank'>
         <span className="inline-block border border-[#00000005] rounded-[5px] text-base hover:border hover:border-black bg-[#8584EF20] dark:text-black py-[10px] px-[14px] sm:px-5">
           Send a message
         </span>
+        </a>
       </div>
     </div>
   );

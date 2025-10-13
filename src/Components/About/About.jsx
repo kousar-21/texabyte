@@ -38,7 +38,7 @@ const About = () => {
                     From concept to deployment, we work closely with you to create
                     experiences that are not only functional but also meaningful and
                     impactful. At Techsabyte, every project is more than just code or
-                    design — it’s an opportunity to tell your story and turn your ideas
+                    design, it’s an opportunity to tell your story and turn your ideas
                     into reality.
                 </p>
             </div>

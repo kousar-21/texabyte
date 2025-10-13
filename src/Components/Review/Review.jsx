@@ -1,58 +1,43 @@
 import React from "react";
 import { motion } from "framer-motion";
 import quotation from "../../assets/reviews/quotation.png";
-import woman1 from "../../assets/reviews/woman-1.png";
-import man1 from "../../assets/reviews/man-1.jpg";
-import woman2 from "../../assets/reviews/woman-2.jpg";
+import mosarraf from "../../assets/nahida/mosarrof.jpeg"
+import we from "../../assets/nahida/we.jpeg"
+import emi from "../../assets/nahida/emi.jpeg"
+import nahida from "../../assets/nahida/nahida.jpg"
 
 const reviewsData = [
   {
     id: 1,
     quote:
-      "Joining this bootcamp was one of the best decisions I made. The program combined creativity with practical learning, and the projects really helped me understand how to apply the skills in real situations. The supportive environment made the whole journey inspiring and motivating.",
-    author: "Eva Jaman",
-    title: "Junior Software Developer",
-    image: woman1,
+      "Working with Techsabyte was a transformative experience. Their team not only understood our brand vision but elevated it with creative precision. Since launch, we’ve seen a notable boost in engagement, and their cohesive design approach strengthened our presence across all platforms. Truly impressed",
+    author: "Mosarof Hossain",
+    title: "Founder & CEO, FVE Service",
+    image: mosarraf,
   },
   {
     id: 2,
     quote:
-      "I approached them for a complete digital solution, and they delivered beyond expectations. They created a seamless system tailored to my project needs, saving us time and increasing efficiency. What impressed me most was their problem-solving approach—every challenge had a creative and effective solution. Truly reliable professionals!",
-    author: "Eva Jaman",
-    title: "Junior Software Developer",
-    image: woman2,
+      "Techsabyte brings exceptional creativity and professionalism to every project. They deeply understood our brand goals and translated them into effective, high-quality solutions. The process was smooth, collaborative, and results-driven. Truly a team you can count on!",
+    author: "Ethan Collins",
+    title: "Entrepreneur & Digital Strategist",
+    image: we,
   },
   {
     id: 3,
     quote:
-      "From the very beginning, the team showed professionalism and dedication. They designed engaging digital content for my brand that helped me stand out online. Every detail, from visuals to messaging, was carefully crafted to match my goals. Their ability to combine creativity with strategy makes them one of the best teams I’ve collaborated with.",
-    author: "Farhan Ahmed",
-    title: "Founder of Creative Hive",
-    image: man1,
+      "Partnering with Techsabyte was a truly rewarding experience. Their team brought energy, clarity, and full commitment to our project from the start. They grasped our goals quickly and delivered results that surpassed our expectations. Skilled, meticulous, and highly professional. Strongly recommended!",
+    author: "Nadia Hasan",
+    title: "Business Consultant",
+    image: nahida,
   },
   {
     id: 4,
     quote:
-      "From the very beginning, the team showed professionalism and dedication. They designed engaging digital content for my brand that helped me stand out online. Every detail, from visuals to messaging, was carefully crafted to match my goals. Their ability to combine creativity with strategy makes them one of the best teams I’ve collaborated with.",
-    author: "Farhan Ahmed",
-    title: "Founder of Creative Hive",
-    image: man1,
-  },
-  {
-    id: 5,
-    quote:
-      "Joining this bootcamp was one of the best decisions I made. The program combined creativity with practical learning, and the projects really helped me understand how to apply the skills in real situations. The supportive environment made the whole journey inspiring and motivating.",
-    author: "Moumita Mou",
-    title: "Data Analyst & Project Lead",
-    image: woman1,
-  },
-  {
-    id: 6,
-    quote:
-      "I approached them for a complete digital solution, and they delivered beyond expectations. They created a seamless system tailored to my project needs, saving us time and increasing efficiency. What impressed me most was their problem-solving approach—every challenge had a creative and effective solution. Truly reliable professionals!",
-    author: "Moumita Mou",
-    title: "Data Analyst & Project Lead",
-    image: woman2,
+      "Techsabyte is a highly creative and ambitious agency. They execute projects with precision, closely following client instructions and paying attention to every detail. Collaborating with their team has been a pleasure, always professional, reliable, and fully committed to delivering excellence. Highly recommended!",
+    author: "Emilia Afet",
+    title: "CEO, EA Portal",
+    image: emi,
   },
 ];
 
@@ -65,7 +50,7 @@ const Review = () => {
       {/* Section Header */}
       <div className="text-center mt-20 md:mt-32 lg:mt-40">
         <span className="inline-block px-4 py-2 border border-[#00000020] rounded-[5px] text-base text-black">
-          Reviews
+          Testimonial
         </span>
       </div>
 
