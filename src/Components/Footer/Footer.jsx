@@ -4,10 +4,13 @@ import fb from '../../assets/footer/facebook.png';
 import insta from '../../assets/footer/instragram.png';
 import linkedin from '../../assets/footer/linkedin.png';
 import whatsapp from '../../assets/footer/whatsapp.png';
+import { Link as ScrollLink } from 'react-scroll';
+
 
 const Footer = () => {
+
   return (
-    <div  id="contact" className="mx-4 sm:mx-6 md:mx-10 lg:mx-[50px]">
+    <div id="contact" className="mx-4 sm:mx-6 md:mx-10 lg:mx-[50px]">
       {/* Divider */}
       <div className="border-b-2 border-gray-300 mt-20 mb-14"></div>
 
@@ -18,10 +21,36 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className="lg:text-base text-primary flex items-center mt-8 gap-4">
-            <p>About</p>
-            <p>Services</p>
-            <p>Projects</p>
-            
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="cursor-pointer hover:text-[#8584EF] transition"
+            >
+              About
+            </ScrollLink>
+
+            <ScrollLink
+              to="services"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="cursor-pointer hover:text-[#8584EF] transition"
+            >
+              Services
+            </ScrollLink>
+
+            <ScrollLink
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="cursor-pointer hover:text-[#8584EF] transition"
+            >
+              Projects
+            </ScrollLink>
+
           </div>
 
           {/* Contact Info */}

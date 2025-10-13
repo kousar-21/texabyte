@@ -2,13 +2,17 @@
 
 @import "tailwindcss";
 @plugin "daisyui";
+
 @plugin "daisyui/theme" {
   name: "mytheme";
-  default: true; /* set as default */
-  prefersdark: true; /* set as default dark mode (prefers-color-scheme:dark) */
-  color-scheme: light; /* color of browser-provided UI */
+  default: true;
+  /* set as default */
+  prefersdark: true;
+  /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light;
+  /* color of browser-provided UI */
 
-  
+
   --color-primary: #8584EF;
   --color-secondary: #484848;
   --color-accent: #000000;
@@ -22,5 +26,5 @@
 } */
 
 * {
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }

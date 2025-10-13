@@ -4,8 +4,8 @@ import { useLocation, useNavigate } from 'react-router';
 import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
-  const location = useLocation(); 
-  const navigate = useNavigate(); 
+  const location = useLocation();
+  const navigate = useNavigate();
 
 
   //  New function to handle scrolling between pages
@@ -15,7 +15,19 @@ const Navbar = () => {
     }
   };
 
-  //  Updated links with react-scroll
+  // 🔥 Added state to manage active section
+  const [activeSection, setActiveSection] = React.useState(null);
+
+  // 🔥 Added function to set active section on click
+  const handleSectionClick = (section) => {
+    setActiveSection(section);
+
+    setTimeout(() => {
+      handleScroll(section);
+    }, 0);
+  };
+
+  // 🔥 Updated links with active + hover styles
   const links = (
     <>
       <li>
@@ -25,8 +37,12 @@ const Navbar = () => {
           duration={500}
           offset={-70}
           spy={true}
-          className="cursor-pointer"
-          onClick={() => handleScroll("about")} // 🔥 Added
+          onClick={() => handleSectionClick("about")} // 🔥 changed
+          className={`cursor-pointer px-3 py-2 rounded-[4px] transition-colors duration-300 
+            ${activeSection === "about"
+              ? "bg-[#8584EF] text-white"  // 🔥 active state color
+              : "hover:bg-[#8584EF20]"}   // 🔥 hover color
+          `}
         >
           About
         </ScrollLink>
@@ -38,8 +54,12 @@ const Navbar = () => {
           duration={500}
           offset={-70}
           spy={true}
-          className="cursor-pointer"
-          onClick={() => handleScroll("services")} // 🔥 Added
+          onClick={() => handleSectionClick("services")} // 🔥 changed
+          className={`cursor-pointer px-3 py-2 rounded-[4px] transition-colors duration-300 
+            ${activeSection === "services"
+              ? "bg-[#8584EF] text-white"
+              : "hover:bg-[#8584EF20]"}
+          `}
         >
           Services
         </ScrollLink>
@@ -51,8 +71,12 @@ const Navbar = () => {
           duration={500}
           offset={-70}
           spy={true}
-          className="cursor-pointer"
-          onClick={() => handleScroll("projects")} // 🔥 Added
+          onClick={() => handleSectionClick("projects")} // 🔥 changed
+          className={`cursor-pointer px-3 py-2 rounded-[4px] transition-colors duration-300 
+            ${activeSection === "projects"
+              ? "bg-[#8584EF] text-white"
+              : "hover:bg-[#8584EF20]"}
+          `}
         >
           Projects
         </ScrollLink>
@@ -64,8 +88,12 @@ const Navbar = () => {
           duration={500}
           offset={-70}
           spy={true}
-          className="cursor-pointer"
-          onClick={() => handleScroll("contact")} // 🔥 Added
+          onClick={() => handleSectionClick("contact")} // 🔥 changed
+          className={`cursor-pointer px-3 py-2 rounded-[4px] transition-colors duration-300 
+            ${activeSection === "contact"
+              ? "bg-[#8584EF] text-white"
+              : "hover:bg-[#8584EF20]"}
+          `}
         >
           Contact
         </ScrollLink>
@@ -83,11 +111,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 dark:bg-white pt-[20px] sm:pt-[30px] lg:pt-[50px] px-4 sm:px-[30px] lg:px-[50px]">
+    <div className="navbar border-b border-b-gray-300 bg-base-100 dark:bg-white pt-[20px] sm:pt-[30px] lg:pt-[50px] px-4 sm:px-[30px] lg:px-[50px]">
       {/* Navbar Start */}
       <div className="navbar-start">
         {/* Mobile Dropdown */}
-        <div className="dropdown">
+        <div className="dropdown dark:text-black">
           <div tabIndex={0} role="button" className="pr-4 md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +134,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-[#000000] text-base"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-[#000000] dark:bg-[#E7E6FC] text-base"
           >
             {links}
           </ul>

@@ -68,7 +68,7 @@ const Review = () => {
           {repeatedData.map((review, index) => (
             <div
               key={index}
-              className="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl border border-gray-200 p-6 relative shadow-sm flex flex-col justify-between h-[420px]"
+              className="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl border border-gray-200 p-6 relative shadow-sm flex flex-col justify-between"
             >
               {/* Quotation icon */}
               <div className="absolute -top-5 left-6 border border-accent bg-[#8584EF20] w-10 h-10 rounded-full flex items-center justify-center z-10">
@@ -80,7 +80,7 @@ const Review = () => {
               </div>
 
               {/* Review content */}
-              <div className="mt-6 mx-10 border border-gray-200 rounded-lg p-5 bg-white flex-1 flex items-center">
+              <div className="mt-6 mx-5 border border-gray-200 rounded-lg p-5 bg-white flex-1 flex items-center">
                 <p className="text-gray-700 text-sm md:text-sm leading-relaxed text-justify">
                   {review.quote}
                 </p>
